@@ -154,7 +154,7 @@
                     Partners
                 </vs-sidebar-item>
             </template>
-            <vs-sidebar-item id="porygonbot" to="/partner/porygon-bot">
+            <vs-sidebar-item id="porygonbot" to="/partners/porygon-bot">
                 Porygon Bot
             </vs-sidebar-item>
             <vs-sidebar-item id="igl-pokefinum" to="/partners/igl-pokefinium">
