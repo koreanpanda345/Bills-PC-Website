@@ -1,7 +1,6 @@
 <template>
     <div>
         <div>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <vs-navbar
                 center-collapsed
                 v-model="active"
@@ -100,7 +99,7 @@
                     </vs-navbar-item>
                 </template>
             </vs-navbar>
-<div class="hidden">
+<div class="hidden" id="content-mobile">
       <vs-navbar shadow square center-collapsed v-model="active" color="dark">
           <template #left>
           <vs-button warn border @click="activeSidebar = !activeSidebar" flat icon>
