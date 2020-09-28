@@ -1,0 +1,115 @@
+
+:root {
+    --color: #243746;
+    --color-primary: #158876;
+    --color-secondary: #0e2233;
+    --bg: #f3f5f4;
+    --bg-secondary: #fff;
+    --border-color: #ddd;
+}
+
+.dark-mode {
+    --color: #ebf4f1;
+    --color-primary: #41b38a;
+    --color-secondary: #fdf9f3;
+    --bg: #091a28;
+    --bg-secondary: #071521;
+    --border-color: #0d2538;
+}
+
+.sepia-mode {
+    --color: #433422;
+    --color-secondary: #504231;
+    --bg: #f1e7d0;
+    --bg-secondary: #eae0c9;
+    --border-color: #ded0bf;
+}
+
+body {
+    font-family:
+    'Source Sans Pro',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    sans-serif;
+    background-color: #131414;
+    /* background-image: url('/g856.png'); */
+
+}
+
+.container {
+    margin-top: 10%;
+    /* min-height: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 20%;
+    padding-right: 20%;
+    background-color: #333333;
+  }
+  
+  .title {
+    font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    display: block;
+    font-weight: 300;
+    font-size: 55px;
+    color: #35495e;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    margin: 25px 0;
+  }
+  
+  .subtitle {
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: #526488;
+    word-spacing: 2px;
+    padding-bottom: 15px;
+    max-width: 600px;
+  }
+  
+  .subtitle a {
+    font-weight: 500;
+    color: inherit;
+  }
+  
+  .links {
+    padding-top: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .content-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 500px;
+  }
+  
+  .plus {
+    font-size: 2.5rem;
+    margin: 15px;
+    color: #35495e;
+  }
+  
+  .h3 {
+    font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 400;
+    margin: 10px;
+  }
+
+a {
+    color: var(--color-primary);
+}
+
+.footer {
+  padding-left: 25%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
