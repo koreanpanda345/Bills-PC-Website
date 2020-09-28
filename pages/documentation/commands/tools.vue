@@ -11,7 +11,7 @@
 				Tool Commands
 			</template>
 			<h2>
-				Team Commands are commands that stores your teams to your very own "PC".
+				Tool commands are commands that will help you out when building a team.
 			</h2>
 		</vs-alert>
 		<br>
