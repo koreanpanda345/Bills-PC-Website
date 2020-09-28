@@ -1,11 +1,13 @@
 <template>
     <div>
         <div>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <vs-navbar
                 center-collapsed
                 v-model="active"
                 color="dark"
                 style="color: white;"
+                id="content-desktop"
             >
                 <template #left>
                     <img src="/g856.png" alt="logo" style="width: 50px;" />
@@ -98,6 +100,76 @@
                     </vs-navbar-item>
                 </template>
             </vs-navbar>
+<div class="hidden">
+      <vs-navbar shadow square center-collapsed v-model="active" color="dark">
+          <template #left>
+          <vs-button warn border @click="activeSidebar = !activeSidebar" flat icon>
+            ☰
+          </vs-button>
+          </template>
+      </vs-navbar>
+      <vs-sidebar
+        absolute
+        v-model="active"
+        :open.sync="activeSidebar"
+        background="dark"
+        textWhite
+        >
+        <template #logo>
+        <img src="/g856.png" alt="logo" style="width: 50px;" />
+        </template>
+        <vs-sidebar-item id="home" to="/">
+          Home
+        </vs-sidebar-item>
+        <vs-sidebar-item id="about" to="/about">
+          About
+        </vs-sidebar-item>
+        <vs-sidebar-item id="stats" to="/stats">
+          Stats
+        </vs-sidebar-item>
+        <vs-sidebar-group>
+            <template #header>
+                <vs-sidebar-item arrow>
+                    Docs
+                </vs-sidebar-item>
+            </template>
+            <vs-sidebar-item id="team" to="/documentation/commands/team">
+                Team Commands
+            </vs-sidebar-item>
+            <vs-sidebar-item id="draft" to="/documentation/commands/draft">
+                Draft Commands
+            </vs-sidebar-item>
+            <vs-sidebar-item id="tools" to="/documentation/commands/tools">
+                Tools Commands
+            </vs-sidebar-item>
+            <vs-sidebar-item id="settings" to="/documentation/commands/settings">
+                Settings Commands
+            </vs-sidebar-item>
+            <vs-sidebar-item id="other" to="/documentation/commands/other">
+                Other Commands
+            </vs-sidebar-item>
+        </vs-sidebar-group>
+        <vs-sidebar-group>
+            <template #header>
+                <vs-sidebar-item arrow>
+                    Partners
+                </vs-sidebar-item>
+            </template>
+            <vs-sidebar-item id="porygonbot" to="/partner/porygon-bot">
+                Porygon Bot
+            </vs-sidebar-item>
+            <vs-sidebar-item id="igl-pokefinum" to="/partners/igl-pokefinium">
+                IGL Pokefinium
+            </vs-sidebar-item>
+            <vs-sidebar-item id="lcd" to="/partners/league-colosseum-draft">
+                League Colosseum Draft
+            </vs-sidebar-item>
+        </vs-sidebar-group>
+        <vs-sidebar-item id="hallOfFame" to="/hall-of-fame">
+            Hall Of Fame
+        </vs-sidebar-item>
+      </vs-sidebar>
+    </div>
         </div>
         <Nuxt />
         <Footer />
@@ -108,7 +180,8 @@ import Footer from '@/components/Footer'
 export default {
 name: 'default',
 data: () => ({
-    active: 'Home'
+    active: 'Home',
+    activeSidebar: false
 }),
 components: {
     Footer

@@ -1,4 +1,13 @@
 
+#content-desktop {display:block;}
+#content-mobile {display: none;}
+
+@media screen and (max-width: 768px) {
+	#content-desktop {display: none;}
+	#content-mobile {display: block;}
+}
+
+
 :root {
     --color: #243746;
     --color-primary: #158876;
@@ -24,6 +33,7 @@
     --bg-secondary: #eae0c9;
     --border-color: #ded0bf;
 }
+
 
 body {
     font-family:
